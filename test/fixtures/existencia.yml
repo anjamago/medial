@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_usuario: 1
+  producto: MyString
+  fecha_vencimiento: 2016-11-29 20:48:22
+  cantidad: 1
+
+two:
+  id_usuario: 1
+  producto: MyString
+  fecha_vencimiento: 2016-11-29 20:48:22
+  cantidad: 1

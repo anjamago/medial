@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_laboratorio: 1
+  nombre: MyString
+  precio_compra: 1
+  imagen: MyString
+
+two:
+  id_laboratorio: 1
+  nombre: MyString
+  precio_compra: 1
+  imagen: MyString
