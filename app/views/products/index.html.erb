@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="text-center"> Products </h1>
+  <section class="row text-center cities-controls">
+      <a href="<%= new_product_path %>" class="btn btn-default"> New Product </a>
+  </section>
+  <% @products.each do |p| %>
+    <article class="row city">
+      <ul>
+        <li class="col-md-2"><strong><%= p.name %></strong></li>
+        <li class="col-md-1"><a href="<%= product_path(a.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+        <li class="col-md-1"><a href="<%= edit_product_path(a.id) %>" class="btn btn-primary"> Edit </a></li>
+        <li class="col-md-1"><a href="<%= product_path(a.id) %>" class="btn btn-info"> Show </a></li>
+      </ul>
+    </article>
+  <% end if @products.any? %>
+</div>
