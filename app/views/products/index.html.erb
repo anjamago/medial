@@ -6,10 +6,11 @@
   <% @products.each do |p| %>
     <article class="row city">
       <ul>
-        <li class="col-md-2"><strong><%= p.name %></strong></li>
-        <li class="col-md-1"><a href="<%= product_path(a.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
-        <li class="col-md-1"><a href="<%= edit_product_path(a.id) %>" class="btn btn-primary"> Edit </a></li>
-        <li class="col-md-1"><a href="<%= product_path(a.id) %>" class="btn btn-info"> Show </a></li>
+        <li class="col-md-2"><strong><%= p.nombre %></strong></li>
+        <li class="col-md-7"><%= image_tag p.imagen_url %></li>
+        <li class="col-md-1"><a href="<%= product_path(p.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+        <li class="col-md-1"><a href="<%= edit_product_path(p.id) %>" class="btn btn-primary"> Edit </a></li>
+        <li class="col-md-1"><a href="<%= product_path(p.id) %>" class="btn btn-info"> Show </a></li>
       </ul>
     </article>
   <% end if @products.any? %>

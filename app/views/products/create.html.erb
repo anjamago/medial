@@ -1,2 +1,11 @@
-<h1>Products#create</h1>
-<p>Find me in app/views/products/create.html.erb</p>
+<div class="container">
+  <article class="row city">
+    <ul>
+      <li class="col-md-2"><strong><%= @product.id_laboratorio %></strong></li>
+      <li class="col-md-2"><%= @product.nombre %></li>
+      <li class="col-md-2"><%= @product.precio_compra %></li>
+      <li class="col-md-2"><%= image_tag @product.imagen_url %></li>
+      <li class="col-md-2"><a href="<%= product_path(@product.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+    </ul>
+  </article>
+</div>

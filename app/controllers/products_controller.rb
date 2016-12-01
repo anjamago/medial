@@ -26,6 +26,15 @@ class ProductsController < ApplicationController
   def delete
   end
 
+  def show
+    find_product
+    if @product.nil?
+      flash[:error] = "Houston we are in troubles, please dont hack us."
+      redirect_to root_path
+    end
+  end
+
+
   def update
   end
 
