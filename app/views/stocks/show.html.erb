@@ -1,0 +1,11 @@
+<div class="container">
+  <article class="row city">
+    <ul>
+      <li class="col-md-2"><strong><%= @stock.id_laboratorio %></strong></li>
+      <li class="col-md-2"><%= @stock.nombre %></li>
+      <li class="col-md-2"><%= @stock.precio_compra %></li>
+      <li class="col-md-4"><%= image_tag @stock.imagen_url %></li>
+      <li class="col-md-2"><a href="<%= stock_path(@stock.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+    </ul>
+  </article>
+</div>

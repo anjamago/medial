@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="text-center"> Labs </h1>
+  <section class="row text-center labs-controls">
+      <a href="<%= new_lab_path %>" class="btn btn-default"> New Lab </a>
+  </section>
+  <% @labs.each do |l| %>
+    <article class="row city">
+      <ul>
+        <li class="col-md-2"><strong><%= l.nombre %></strong></li>
+        <li class="col-md-1"><a href="<%= lab_path(l.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+        <li class="col-md-1"><a href="<%= edit_lab_path(l.id) %>" class="btn btn-primary"> Edit </a></li>
+        <li class="col-md-1"><a href="<%= lab_path(l.id) %>" class="btn btn-info"> Show </a></li>
+      </ul>
+    </article>
+  <% end if @labs.any? %>
+</div>

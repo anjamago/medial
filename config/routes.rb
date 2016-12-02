@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'stocks/index'
+
+  get 'stocks/new'
+
+  get 'stocks/edit'
+
+  get 'stocks/show'
+
   root to: 'static_pages#welcome'
 
   devise_for :users, controllers: {
@@ -9,6 +17,7 @@ Rails.application.routes.draw do
   }
 
   resources :products
-
+  resources :labs
+  resources :stocks
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

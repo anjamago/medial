@@ -1,13 +1,13 @@
 <div class="container">
   <h1 class="text-center"> Products </h1>
-  <section class="row text-center cities-controls">
+  <section class="row text-center products-controls">
       <a href="<%= new_product_path %>" class="btn btn-default"> New Product </a>
   </section>
   <% @products.each do |p| %>
     <article class="row city">
       <ul>
         <li class="col-md-2"><strong><%= p.nombre %></strong></li>
-        <li class="col-md-7"><%= image_tag p.imagen_url %></li>
+        <li class="col-md-4"><%= image_tag p.imagen_url %></li>
         <li class="col-md-1"><a href="<%= product_path(p.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
         <li class="col-md-1"><a href="<%= edit_product_path(p.id) %>" class="btn btn-primary"> Edit </a></li>
         <li class="col-md-1"><a href="<%= product_path(p.id) %>" class="btn btn-info"> Show </a></li>

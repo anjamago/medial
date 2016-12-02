@@ -15,8 +15,11 @@
       </div>
     <% end %>
   <div class="form-group">
-    <%= f.label :id_laboratorio%>
-    <%= f.number_field :id_laboratorio, class: "form-control" %>
+    <select name="product[id_laboratorio]" >
+      <% @labs.each do |l| %>
+        <option value="<%= l.id %>"> <%= l.nombre %></option>
+      <% end %>
+    </select>
   </div>
 
   <div class="form-group">

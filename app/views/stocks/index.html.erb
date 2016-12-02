@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="text-center"> Stock </h1>
+  <section class="row text-center stocks-controls">
+      <a href="<%= new_stock_path %>" class="btn btn-default"> </a>
+  </section>
+  <% @stocks.each do |s| %>
+    <article class="row city">
+      <ul>
+        <li class="col-md-2"><strong><%= s.product.nombre %></strong></li>
+        <li class="col-md-2"><strong><%= s.fecha_vencimiento%></strong></li>
+        <li class="col-md-2"><strong><%= s.cantidad%></strong></li>
+        <li class="col-md-1"><a href="<%= stock_path(s.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+        <li class="col-md-1"><a href="<%= edit_stock_path(s.id) %>" class="btn btn-primary"> Edit </a></li>
+        <li class="col-md-1"><a href="<%= stock_path(s.id) %>" class="btn btn-info"> Show </a></li>
+      </ul>
+    </article>
+  <% end if @stocks.any? %>
+</div>
