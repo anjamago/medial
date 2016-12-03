@@ -18,10 +18,12 @@
       </div>
     <% end %>
 
-    <div class="actions">
+    <div class="form-actions">
       <%= f.submit "Log in" , class: "btn btn-default"%>
     </div>
   <% end %>
+  <div class="form-actions">
+    <%= render "users/shared/links" %>
+  </div>
 
-  <%= render "users/shared/links" %>
 </div>

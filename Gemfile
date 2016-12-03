@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 
+#gem 'pry'
 gem 'pry'
+
+#buscador
+gem 'ransack'
+
+#image resize
+gem 'rmagick'
 
 #image loader
 gem 'carrierwave'

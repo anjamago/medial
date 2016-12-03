@@ -7,7 +7,7 @@
     <article class="row city">
       <ul>
         <li class="col-md-2"><strong><%= p.nombre %></strong></li>
-        <li class="col-md-4"><%= image_tag p.imagen_url %></li>
+        <li class="col-md-4"><%= image_tag p.imagen.thumb %></li>
         <li class="col-md-1"><a href="<%= product_path(p.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
         <li class="col-md-1"><a href="<%= edit_product_path(p.id) %>" class="btn btn-primary"> Edit </a></li>
         <li class="col-md-1"><a href="<%= product_path(p.id) %>" class="btn btn-info"> Show </a></li>

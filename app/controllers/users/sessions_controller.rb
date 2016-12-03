@@ -12,9 +12,11 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  #def create
+  #  aux = super
+  #  sign_in(resource.type.underscore , resource.type.constantize.send(:find , resource.id))unless resource.type.nill
+  #  aux
+  #end
 
   # protected
 

@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
-
+before_action :authenticate_user!#autenticador se coloca en el controlador que quieras restringir
   def index
     @products = Product.all
+    
   end
 
   def new
@@ -29,7 +30,7 @@ class ProductsController < ApplicationController
     find_product
     if @product.destroy
       flash[:error] = "producto eliminado"
-      redirect_to root_path
+      redirect_to products_path
     end
   end
 
