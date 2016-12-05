@@ -12,11 +12,11 @@ class StocksController < ApplicationController
     @stock = Stock.new(stock_params)
     @stock.id_usuario = current_user.id
     if @stock.save
-      puts "Vamos la luz perros "
+      puts "Producto en Stock"
       flash[:success] = "Stock"
       redirect_to stocks_path
     else
-      puts "Buena la rata "
+      puts "algo va mal "
       redirect_to stocks_path
     end
 
@@ -24,11 +24,43 @@ class StocksController < ApplicationController
 
 
   def edit
+    find_stock
+    @products = Product.all
+    if @stock.nil?
+      flash[:error] = "No existe el producto"
+      redirect_to root_path
+    end
   end
 
-  def show
 
-  end
+    def destroy
+      find_stock
+      if @stock.destroy
+        flash[:error] = "stock eliminado"
+        redirect_to stocks_path
+      end
+    end
+
+    def show
+      find_stock
+      if @stock.nil?
+        flash[:error] = "stock"
+        redirect_to root_path
+      end
+    end
+
+
+    def update
+      find_stock
+      if @stock.update(stock_params)
+        flash[:success] = "Product created. Ok"
+        redirect_to stocks_path
+      else
+        @stocks = Stock.all
+        render 'edit'
+      end
+
+    end
 
   private
 

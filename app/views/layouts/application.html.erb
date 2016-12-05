@@ -13,10 +13,11 @@
     <nav class="navbar navbar-inverse">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <a class="navbar-brand" href="<%= root_path %>">My medical shop <%= current_user ? "| #{current_user.email}" : '' %></a>
-          <input type="text" class="navbar-form" placeholder="Nombre" id="product">
-          <input type="text" class="navbar-form" placeholder="Laboratorio" id="labs">
-          <input type="number" class="col-md-3" id="min">
-          <input type="number" class="col-md-3" id="max">
+          <input type="number" class="col-md-1 rango" id="min" placeholder="Minimo">
+          <input type="number" class="col-md-1 rango" id="max" placeholder="Maximo">
+          <input type="text" class="navbar-form rango" placeholder="Nombre" id="product">
+          <input type="text" class="navbar-form rango" placeholder="Laboratorio" id="labs">
+
           <button type="submit" class="btn btn-default" id="search" >Search</button>
 
           <ul class="nav navbar-nav navbar-right">

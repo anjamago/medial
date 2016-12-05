@@ -8,8 +8,8 @@ default: &default
   adapter: mysql2
   pool: 5
   timeout: 5000
-  username: bootcamp2
-  password: bootcamp2
+  username: root
+  password: 12345
   host: 127.0.0.1
   encoding: utf8
   port: 3306
