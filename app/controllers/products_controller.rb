@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 before_action :authenticate_user!#autenticador se coloca en el controlador que quieras restringir
   def index
     @products = Product.all
-    
+
   end
 
   def new
@@ -65,4 +65,14 @@ before_action :authenticate_user!#autenticador se coloca en el controlador que q
   def product_params
     params.require(:product).permit(:id_laboratorio , :nombre , :precio_compra , :imagen)
   end
+end
+
+  class ProductsController < ApplicationController
+    def index
+      @search = Product.search(params[:q])
+      @products = @search.result
+      @search.build_condition
+    end
+  
+
 end

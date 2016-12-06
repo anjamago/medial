@@ -24,31 +24,25 @@ $(document).ready(function(){
         method:'post',
         success:function(dataJson){
           products = dataJson.product;
-          labs = dataJson.labs
+          labs = dataJson.labs;
+          console.log(products);
+          console.log(labs);
+          if (product != "") {
 
-          if(product !=""){
             for(p in products ){
-              if(products[p].nombre === product)
-              {
-                element.innetHTML=products[p].nombre;
-
-              }
+                element.prepend(products[p].nombre);
             }
           }
-            if(labs !=""){
-              for(l in labs ){
-                if(labs[l].nombre === lab)
-                {
-                  for(p in products ){
-                    if(products[p].id_laboratorio === labs[l].id)
-                    {
-                      element.innetHTML=products[p].nombre;
-                      element.innetHTML = labs[l].nombre;
-
-                    }
+          if(labs !=""){
+            for(l in labs ){
+                for(p in products ){
+                  if(products[p].id_laboratorio === labs[l].id)
+                  {
+                    element.prepend(products[p].nombre);
+                    element.prepend(labs[l].nombre);
                   }
-                }
               }
+            }
           }
         },
         error:function(dataJsonError){

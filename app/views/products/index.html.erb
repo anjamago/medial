@@ -13,10 +13,12 @@
         <li class="col-md-2 botones"><a href="<%= product_path(p.id) %>" class="btn btn-info"> Show </a></li>
       </ul>
     </article>
+
   <% end if @products.any? %>
   <article>
     <ul>
       <li><a href="<%= stocks_path %>">Next</a></li>
     </ul>
   </article>
+
 </div>
