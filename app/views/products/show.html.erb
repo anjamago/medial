@@ -1,12 +1,12 @@
 <div class="container">
   <article class="row city">
     <ul id="show_info">
-      <li class="col-md-2 products_padding"><strong><%= @product.id_laboratorio %></strong></li>
+      <li class="col-md-2 products_padding"><strong><%= @product.id_laboratorio%></strong></li>
       <li class="col-md-2 products_padding"><%= @product.nombre %></li>
       <li class="col-md-2 products_padding"><%= @product.precio_compra %></li>
       <li class="col-md-4 "><%= image_tag @product.imagen_url %></li>
       <li class="col-md-2 products_padding"><a href="<%= product_path(@product.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
-      <li class="col-md-2 botones"><a href="<%= products_path(@product.id) %>" class="btn btn-info"> View all </a></li>
+      <li class="col-md-2 botones"><a href="<%= products_path(@product.id)%>" class="btn btn-info"> View all </a></li>
     </ul>
   </article>
 </div>
