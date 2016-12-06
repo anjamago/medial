@@ -15,8 +15,9 @@
     </article>
   <% end if @products.any? %>
   <article>
-    <ul>
-      <li><a href="<%= stocks_path %>">Next</a></li>
+    <ul class="pager pagination">
+      <li class="previous"><a href="<%= labs_path %>"><span aria-hidden="true">&larr;</span>Back</a></li>
+      <li class="next" ><a href="<%= stocks_path %>">Next<span aria-hidden="true">&rarr;</span></a></li>
     </ul>
   </article>
 </div>

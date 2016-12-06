@@ -21,7 +21,9 @@
    background-color: rgba(232, 231, 231, 0.89);
  }
 
- nav{background-color: #35d6b1;}
+.nav_align{display:block;float: left;width: 7%;}
+
+.sesion{color: #fff;}
 
  .container {
    background-color: white;
@@ -46,3 +48,5 @@
  }
 
  .rango{margin: 12px 5px 0 5px;}
+
+ .pagination{width: 100%;}
