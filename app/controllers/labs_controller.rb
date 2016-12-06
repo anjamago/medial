@@ -1,5 +1,5 @@
 class LabsController < ApplicationController
-
+  before_action :authenticate_user!#autenticador se coloca en el controlador que quieras restringir
     def index
       @labs = Lab.all
     end

@@ -15,8 +15,8 @@
 
   <% end if @labs.any? %>
   <article>
-    <ul>
-      <li><a href="<%= products_path %>">Next</a></li>
+    <ul class="pager pagination">
+      <li class="next"><a href="<%= products_path %>">Next<span aria-hidden="true">&rarr;</span></a></li>
     </ul>
   </article>
 </div>
