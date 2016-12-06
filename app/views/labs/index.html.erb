@@ -12,5 +12,11 @@
         <li class="col-md-2"><a href="<%= lab_path(l.id) %>" class="btn btn-info"> Show </a></li>
       </ul>
     </article>
+
   <% end if @labs.any? %>
+  <article>
+    <ul>
+      <li><a href="<%= products_path %>">Next</a></li>
+    </ul>
+  </article>
 </div>
