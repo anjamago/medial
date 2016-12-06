@@ -5,19 +5,17 @@ $(document).ready(function(){
       var min = $('#min').val() !=='' ? $('#min').val() : 0  ;
       var max = $('#max').val() !=='' ? $('#max').val() : 0;
       var product = $('#product').val();
-      var labs = $('#labs').val();
-      console.log(product, labs);
+      var lab = $('#labs').val();
+      var element = $('#msjReques');
       if(product === '' && labs === '')
-        {
-          console.log('campos vacio');
-          alert('Campos Vacios Ingrese un valor ');
-          return ;
-        }
+      {
+          element.innetHTML = 'Ingrese un Laboratorio o un producto';
+      }
       var data = {
         'min':min,
         'max':max,
         'product':product,
-        'labs':labs
+        'labs':lab
       };
       $.ajax({
         url:'/search',
@@ -25,12 +23,39 @@ $(document).ready(function(){
         data:data,
         method:'post',
         success:function(dataJson){
-          console.log(dataJson);
+          products = dataJson.product;
+          labs = dataJson.labs
+
+          if(product !=""){
+            for(p in products ){
+              if(products[p].nombre === product)
+              {
+                element.innetHTML=products[p].nombre;
+
+              }
+            }
+          }
+            if(labs !=""){
+              for(l in labs ){
+                if(labs[l].nombre === lab)
+                {
+                  for(p in products ){
+                    if(products[p].id_laboratorio === labs[l].id)
+                    {
+                      element.innetHTML=products[p].nombre;
+                      element.innetHTML = labs[l].nombre;
+
+                    }
+                  }
+                }
+              }
+          }
         },
         error:function(dataJsonError){
           console.log(dataJsonError);
         }
 
       });
+
   });
 });

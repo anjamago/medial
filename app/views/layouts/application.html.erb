@@ -35,7 +35,9 @@
     <span class="flash-message <%= flash[:success] ? 'success' : flash[:error] ? 'error' : flash[:notice] ? 'notice' : '' %>">
       <%= flash[:success] ? flash[:success] : flash[:error] ? flash[:error] : flash[:notice] ? flash[:notice] : '' %>
     </span>
+
     <% end %>
+      <div class="msjReques"></div>
     <%= yield %>
   </body>
 </html>
