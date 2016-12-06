@@ -2,7 +2,8 @@
   <article class="row city">
     <ul>
       <li class="col-md-2"><%= @lab.nombre %></li>
-      <li class="col-md-2"><a href="<%= product_path(@product.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+      <li class="col-md-2"><a href="<%= lab_path(@lab.id) %>" data-method="delete" class="btn btn-danger"> Delete </a></li>
+      <li class="col-md-2 botones"><a href="<%= labs_path(@lab.id)%>" class="btn btn-info"> View all </a></li>
     </ul>
   </article>
 </div>
