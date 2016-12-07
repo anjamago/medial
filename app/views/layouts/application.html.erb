@@ -20,13 +20,17 @@
 
           <button type="submit" class="btn btn-default rango nav_align" id="search" >Search</button>
 
-          <ul class="nav_align">
+          <!--<ul class="nav_align">
             <% if !current_user %>
               <li><a  href="<%= user_session_path %>">Log in</a></li>
               <li><a href="<%= new_user_registration_path %>">Sign up</a></li>
             <% else %>
               <li><a href="<%= destroy_user_session_path %>" data-method="delete">Log out</a></li>
             <% end %>
+        </ul>-->
+
+        <ul class="nav_align">
+          <li><a href="<%= destroy_user_session_path %>" data-method="delete">Log out</a></li>
         </ul>
        </div>
     </nav>

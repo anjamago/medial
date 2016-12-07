@@ -23,7 +23,12 @@ class LabsController < ApplicationController
         end
     end
 
-    def delete
+    def destroy
+      find_lab
+      if @lab.destroy
+        flash[:error] = "producto eliminado"
+        redirect_to labs_path
+      end
     end
 
     def show

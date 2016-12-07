@@ -9,7 +9,7 @@ $(document).ready(function(){
       var element = $('#msjReques');
       if(product === '' && labs === '')
       {
-          element.innetHTML = 'Ingrese un Laboratorio o un producto';
+        element.innerHTML = 'Ingrese un Laboratorio o un producto';
       }
       var data = {
         'min':min,
